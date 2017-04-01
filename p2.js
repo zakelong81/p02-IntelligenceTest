@@ -1,7 +1,9 @@
 function no1answer()
 {
-  var guess = document.getElementById("no1answer").value;
-  var answer1 = 0;
+  var guess ;
+  guess = document.getElementById("no1answer").value;
+  var score1 = 0;
+
     if(guess.toLowerCase() == "helloworld")
     {
       document.getElementById("answerGroup").classList.remove("has-error");
@@ -11,8 +13,8 @@ function no1answer()
       document.getElementById("answerError").innerHTML="Your answer is correct";
       document.getElementById("answerError").classList.remove("hidden-message");
       document.getElementById("answerError").classList.add("shown-message");
-      answer1 ++;
-      setCookie("guess", 1, 1);
+      score1 = 1;
+      setCookie("guess1", score1, 1);
     }
     else
     {
@@ -20,21 +22,25 @@ function no1answer()
       document.getElementById("answerError").classList.remove("hidden-message");
       document.getElementById("answerError").classList.add("shown-message");
       document.getElementById("answerGroup").classList.add("has-error");
-      setCookie("guess", 0, 1);
+      score1 = 0;
+      setCookie("guess1", score1 ,1);
     }
 }
 
 function no2answer()
 {
-  var guess = document.getElementById("no2answer").value;
-  var answer2 = 0;
+  var guess ;
+  guess = document.getElementById("no2answer").value;
+  var score2 = 0;
+
   if(isNaN(guess) == true)
   {
     document.getElementById("answerError").innerHTML="Your answer must be a number";
     document.getElementById("answerError").classList.remove("hidden-message");
     document.getElementById("answerError").classList.add("shown-message");
     document.getElementById("answerGroup").classList.add("has-error");
-    setCookie("answer", 0, 1);
+    score2 = 0;
+    setCookie("guess2", score2 ,1);
   }
   else
   {
@@ -47,8 +53,8 @@ function no2answer()
       document.getElementById("answerError").innerHTML="Your answer is correct";
       document.getElementById("answerError").classList.remove("hidden-message");
       document.getElementById("answerError").classList.add("shown-message");
-      answer2 ++;
-      setCookie("guess", 1, 1);
+      score2 = 1;
+      setCookie("guess2", score2 ,1);
 
     }
     else if(guess == 96)
@@ -60,8 +66,8 @@ function no2answer()
       document.getElementById("answerError").innerHTML="Your answer is correct";
       document.getElementById("answerError").classList.remove("hidden-message");
       document.getElementById("answerError").classList.add("shown-message");
-      answer2 ++;
-      setCookie("guess", 1, 1);
+      score2
+      setCookie("guess2", score2 ,1);
     }
     else
     {
@@ -69,22 +75,26 @@ function no2answer()
       document.getElementById("answerError").classList.remove("hidden-message");
       document.getElementById("answerError").classList.add("shown-message");
       document.getElementById("answerGroup").classList.add("has-error");
-      setCookie("guess", 0, 1);
+      score2 = 0;
+      setCookie("guess2", score2 ,1);
     }
   }
 }
 
 function no3answer()
 {
-  var guess = document.getElementById("no3answer").value;
-  var answer3=0;
+  var guess ;
+  guess = document.getElementById("no3answer").value;
+  var score3 = 0;
+
   if(isNaN(guess) == true)
   {
     document.getElementById("answerError").innerHTML="Your answer must be a number";
     document.getElementById("answerError").classList.remove("hidden-message");
     document.getElementById("answerError").classList.add("shown-message");
     document.getElementById("answerGroup").classList.add("has-error");
-    setCookie("answer", 0, 1);
+    score3 = 0;
+    setCookie("guess3", score3 ,1);
   }
   else
   {
@@ -97,8 +107,8 @@ function no3answer()
       document.getElementById("answerError").innerHTML="Your answer is correct";
       document.getElementById("answerError").classList.remove("hidden-message");
       document.getElementById("answerError").classList.add("shown-message");
-      answer3 ++;
-      setCookie("guess", 1, 1);
+      score3 = 1;
+      setCookie("guess3", score3 ,1);
     }
     else
     {
@@ -106,19 +116,30 @@ function no3answer()
       document.getElementById("answerError").classList.remove("hidden-message");
       document.getElementById("answerError").classList.add("shown-message");
       document.getElementById("answerGroup").classList.add("has-error");
-      setCookie("guess", 0, 1);
+      score3 = 0;
+      setCookie("guess3", score3 ,1);
     }
   }
 }
 
 function score()
 {
-  var answer = Number(getCookie("answer"));
-  previousAnswer /= 3;
-  previousAnswer *= 100;
-  var resultanswer = (answer1+answer2+answer3)/3 * 100;
-  document.getElementById("result").innerHTML = previousAnswer + "%";
-  document.getElementById("result1").innerHTML = resultanswer + "%";
+
+  var score1 = getCookie("guess1");
+  score1 =  Number(score1);
+  var score2 = getCookie("guess2");
+  score2 =  Number(score2);
+  var score3 = getCookie("guess3");
+  score3 =  Number(score3);
+  var result= (score1+score2+score3)/3*100;
+
+  document.getElementById("result").innerHTML = asPercent(result);
+
+}
+
+function asPercent(score)
+{
+  return  score.toFixed(2) + "%" ;
 }
 
 function test2() {

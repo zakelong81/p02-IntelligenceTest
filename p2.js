@@ -1,3 +1,4 @@
+/*Long Nguyen*/
 function no1answer()
 {
   var guess ;

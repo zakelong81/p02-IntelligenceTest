@@ -1,0 +1,71 @@
+#backgroundhome{
+    background: url('http://www.insidehr.com.au/wp-content/uploads/2015/03/HR-technology-intelligence.jpg') no-repeat 0 0 scroll;
+    background-color:#0C0C0C;
+    background-size: 100% 100%;
+    height:100%;
+    width:100%;
+}
+
+#backgroundtest1{
+    background: url('https://upload.wikimedia.org/wikipedia/commons/6/61/Flying_upside_down.jpg') no-repeat 0 0 scroll;
+    background-color:#0C0C0C;
+    background-size: 100% 100%;
+    height:100%;
+    width:100%;
+}
+
+#backgroundmajor{
+    background: url('http://www.imagestowallpapers.com/wp-content/uploads/2015/12/Background-Image-CSS.jpg') no-repeat 0 0 scroll;
+    background-color:#0C0C0C;
+    background-size: 150% 150%;
+    height:100%;
+    width:100%;
+}
+#backgroundfact{
+    background: url('http://orig10.deviantart.net/c9a5/f/2014/121/0/3/meepo_dota_2_wallpaper_clean_by_css101-d7go9t6.jpg') no-repeat 0 0 scroll;
+    background-color:#0C0C0C;
+    background-size: 100% 100%;
+    height:100%;
+    width:100%;
+}
+
+span.hidden-message{
+  opacity: 0.0;
+}
+span.shown-message{
+  opacity: 1.0;
+}
+
+nav.center div
+{
+    text-align: center;
+}
+
+nav div
+  {
+      background-color: skyblue;
+      border-style: solid;
+  }
+
+table
+{
+  margin-left:auto;
+  margin-right:auto;
+}
+
+td
+{
+  font-size: 40px;
+  text-align: center;
+}
+
+button{
+  display: flex;
+  margin:0 auto;
+  align-items:center;
+}
+
+.font{
+   text-align: center;
+   font-family: 'Copperplate','Goudy Old Style' , 'Papyrus', serif;
+}

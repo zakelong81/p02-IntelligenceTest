@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html id ="backgroundtest1">
+  <head>
+    <meta charset="UTF-8">
+    <title> Test 2 </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script type="text/javascript" src="p2.js"></script>
+  </head>
+  <body lang="en-US">
+
+    <h1 class = "font">Math is easy. Wait, isn't it? </h1>
+    <table>
+     <tr>
+       <td>1</td>      <td>&nbsp;+&nbsp;</td>   <td>4</td>      <td>&nbsp;=&nbsp;</td>    <td>5</td>
+     </tr>
+     <tr>
+       <td>2</td>      <td>&nbsp;+&nbsp;</td>   <td>5</td>     <td>&nbsp;=&nbsp;</td>    <td>12</td>
+     </tr>
+     <tr>
+       <td>3</td>      <td>&nbsp;+&nbsp;</td>   <td>6</td>      <td>&nbsp;=&nbsp;</td>    <td>21</td>
+     </tr>
+     <tr>
+       <td>8</td>      <td>&nbsp;+&nbsp;</td>   <td>11</td>     <td>&nbsp;=&nbsp;</td>
+       <td> <input type="text" id="no2answer" class="form-control input-md" placeholder="Answer" oninput="no2answer()"> </td>
+     </tr>
+     <tr>
+       <td></td><td></td> <td></td><td></td><td>
+         <div class="form-group" id="answerGroup">
+       <span id="answerError"  class="control-label hidden-message font" > Error Placeholder (hidden)  </span>
+       </div></td>
+     </tr>
+     <tr>
+       <td></td><td></td> <td></td><td><button class="btn btn-default  font"  type="button" onclick="test3();"  >Move on</button></td>
+     </tr>
+   </table>
+
+
+  </body>
+</html>
